@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Himanshi | Mini LEX Analyzer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#home"><span class="brandmark">✦</span> HIMANSHI · MINI LEX</a><nav><a href="#home">Home</a><a href="#analyzer">Analyzer</a><a href="#results">Results</a></nav><span class="status"><i></i> C++ ENGINE READY</span></header>
+<main>
+<section class="hero" id="home">
+<div class="eyebrow"><span></span> COMPILER DESIGN PROJECT / GROUP 9</div>
+<h1>Decode your code.<br><em>One token at a time.</em></h1>
+<p>A minimal, C++17-powered lexical analyzer. Explore how your source code breaks into tokens, detect invalid characters, and inspect every match.</p>
+<div class="features"><span>01 / REGEX RULES</span><span>02 / LONGEST MATCH</span><span>03 / TOKEN ANALYSIS</span></div>
+</section>
+<section class="workspace" id="analyzer">
+<div class="section-head"><div><small>THE WORKSPACE</small><h2>Lexical analyzer</h2></div><span class="step">01 — 02</span></div>
+<div class="panel">
+<div class="panel-title"><div><small>SOURCE INPUT</small><strong>Write or paste your code</strong></div><span class="engine">C++ ENGINE · v1.0</span></div>
+<div class="toolbar"><label>LEXER SPECIFICATION<select id="spec"><option>C-like</option><option>Arithmetic</option></select></label><div class="actions"><button id="example" class="quiet">Load example</button><label class="upload quiet">Upload file<input type="file" id="file" accept=".txt,.c,.cpp,.java"></label><button id="clear" class="quiet">Clear</button></div></div>
+<div class="editor-wrap"><div class="gutter" id="gutter">1</div><textarea id="source" spellcheck="false" placeholder="// Type or paste source code here..."></textarea></div>
+<div class="editor-foot"><span>UTF-8 · PLAIN TEXT</span><span id="chars">0 CHARACTERS</span></div>
+<div class="runrow"><span>Rules are processed using your original C++ lexical analyzer.</span><button id="analyze">Analyze code <b>↗</b></button></div>
+</div>
+</section>
+<section class="results" id="results">
+<div class="section-head"><div><small>THE OUTPUT</small><h2>Analysis results</h2></div><span class="step">02 — 02</span></div>
+<div class="stats">
+<div class="stat"><small>TOTAL TOKENS</small><strong id="total">—</strong></div>
+<div class="stat"><small>UNIQUE TYPES</small><strong id="unique">—</strong></div>
+<div class="stat"><small>LEXICAL ERRORS</small><strong id="errorCount">—</strong></div>
+</div>
+<div class="panel output-panel">
+<div class="output-head"><div><small>TOKEN STREAM</small><strong id="state">AWAITING ANALYSIS</strong></div><span class="engine">LEXEME / TYPE / POSITION</span></div>
+<div class="table-scroll"><table><thead><tr><th>#</th><th>LEXEME</th><th>TOKEN TYPE</th><th>LINE</th><th>COLUMN</th></tr></thead><tbody id="tokenRows"><tr><td colspan="5" class="empty">Run an analysis to see tokens here.</td></tr></tbody></table></div>
+<div class="bottom-grid"><div><small>TOKEN SUMMARY</small><div id="summary" class="muted">No analysis yet.</div></div><div><small>DIAGNOSTICS</small><div id="diagnostics" class="muted">No analysis yet.</div></div></div>
+</div>
+</section>
+</main>
+<footer><span>MINI LEX © 2026</span><span>BUILT WITH C++17 · FLASK · RENDER</span></footer>
+<script src="/static/app.js"></script>
+</body></html>
